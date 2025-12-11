@@ -7,7 +7,10 @@
 
 NAME = internship_report.pdf
 
-SRC_FILES = src/$(NAME:.pdf=.tex)				\
+ENTRY = src/$(NAME:.pdf=.tex)
+
+SRC_FILES = $(ENTRY)							\
+			src/cover_page.tex					\
 			src/foreword.tex					\
 			src/table_of_contents.tex			\
 			src/context.tex						\
@@ -20,9 +23,9 @@ all: $(NAME)
 $(NAME): $(SRC_FILES)
 	@printf "\033[33m%s\033[0m\n" "Building $@..."
 	@printf "  \033[33m%s\033[0m\n" "Building base file..."
-	@pdflatex $(SRC_FILES) > /dev/null <<< '' || (printf "  \033[31m%s\033[0m\n" "Failure. Logs available at $(NAME:.pdf=.log)" && false)
+	@pdflatex $(ENTRY) > /dev/null <<< '' || (printf "  \033[31m%s\033[0m\n" "Failure. Logs available at $(NAME:.pdf=.log)" && false)
 	@printf "  \033[33m%s\033[0m\n" "Building page references..."
-	@pdflatex $(SRC_FILES) > /dev/null  # run a second time for LastPage
+	@pdflatex $(ENTRY) > /dev/null  # run a second time for LastPage
 	@printf "\033[32m%s\033[0m\n" "Successfully built $@"
 
 clean:
