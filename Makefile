@@ -15,9 +15,9 @@ SRC = src/$(NAME:.pdf=.tex)
 all: $(NAME)
 
 $(NAME):
-	@echo "Building $@..."
-	@pdflatex $(SRC) &> /dev/null
-	@echo "Successfully built $@"
+	@printf "\033[33m%s\033[0m\n" "Building $@..."
+	@pdflatex $(SRC) > /dev/null
+	@printf "\033[32m%s\033[0m\n" "Successfully built $@"
 
 clean:
 	@rm -f $(NAME:.pdf=.aux)
