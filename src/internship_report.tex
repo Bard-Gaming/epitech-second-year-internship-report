@@ -2,10 +2,13 @@
 
 % Packages
 \usepackage{fancyhdr}
+\usepackage{lastpage}
 
 % Styling
 \pagenumbering{arabic}
 \pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage/\pageref{LastPage}}
 
 % General info
 \title{Rapport de Stage~-~Tek2}
@@ -16,7 +19,6 @@
 \begin{document}
 
 \maketitle
-\tableofcontents
 
 \include{src/context}
 

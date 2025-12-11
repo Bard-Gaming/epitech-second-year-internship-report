@@ -16,7 +16,10 @@ all: $(NAME)
 
 $(NAME):
 	@printf "\033[33m%s\033[0m\n" "Building $@..."
+	@printf "  \033[33m%s\033[0m\n" "Building base file..."
 	@pdflatex $(SRC) > /dev/null
+	@printf "  \033[33m%s\033[0m\n" "Building page references..."
+	@pdflatex $(SRC) > /dev/null  # run a second time for LastPage
 	@printf "\033[32m%s\033[0m\n" "Successfully built $@"
 
 clean:
