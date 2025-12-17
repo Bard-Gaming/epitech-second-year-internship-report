@@ -11,6 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{graphicx}
+\usepackage{xcolor}
 
 %%%%%%%%%%%%%%% Config %%%%%%%%%%%%%%%
 % Graphics
@@ -31,11 +32,7 @@
 %%%%%%%%%%%%%% Document %%%%%%%%%%%%%%
 \begin{document}
 
-\begin{titlepage}
-  \maketitle
-  \thispagestyle{empty}
-\end{titlepage}
-
+\include{src/cover_page}
 \include{src/foreword}
 \include{src/table_of_contents}
 \include{src/context}

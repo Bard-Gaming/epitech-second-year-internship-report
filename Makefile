@@ -10,6 +10,7 @@ NAME = internship_report.pdf
 ENTRY = src/$(NAME:.pdf=.tex)
 
 SRC_FILES = $(ENTRY)							\
+			src/cover_page.tex					\
 			src/foreword.tex					\
 			src/table_of_contents.tex			\
 			src/context.tex						\
