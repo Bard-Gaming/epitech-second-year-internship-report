@@ -31,6 +31,12 @@
 \fancyfoot[C]{\thepage/\pageref{LastPage}}
 \pagestyle{fancy}
 
+% Background
+\AddToHook{shipout/background} {
+  \put(0cm, -3cm){\includegraphics[width=\paperwidth]{header.png}}
+  \put(0cm, -\paperheight){\includegraphics[width=\paperwidth]{footer.png}}
+}
+
 
 %%%%%%%%%%%%%% Shortcuts %%%%%%%%%%%%%
 \newcommand{\scemaj}{É}
