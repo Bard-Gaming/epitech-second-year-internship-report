@@ -1,0 +1,20 @@
+#+title: Internship Report
+#+author: Christophe DRONNE
+#+date: Thu Dec 25 12:45:37 2025
+
+** Building the Report
+#+begin_quote
+[!IMPORTANT]
+Building the project requires ~pdflatex~
+(amongst other dependencies).
+All dependencies are present in
+the ~texlive-bin~ and ~texlive-binextra~
+packages.
+#+end_quote
+
+To build the report from source, all you need
+to do is run ~make~:
+
+#+begin_src shell
+make
+#+end_src
