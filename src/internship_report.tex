@@ -9,11 +9,16 @@
 
 %%%%%%%%%%%%%% Packages %%%%%%%%%%%%%%
 \usepackage[explicit,compact]{titlesec}
+\usepackage{anyfontsize}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{graphicx}
 \usepackage{titling}
+\usepackage{xifthen}
 \usepackage{xcolor}
+
+%%%%%%%%%%%%%%%% Utils %%%%%%%%%%%%%%%
+\input{src/utils/cover_page_env}
 
 %%%%%%%%%%%%%%% Config %%%%%%%%%%%%%%%
 % Graphics
@@ -21,8 +26,7 @@
 
 % Chapter Titles
 \titlespacing*{\chapter}{0pt}{0cm}{0.5cm}
-\titleformat{\chapter}[block]
-    {\bfseries\huge}{\filright\huge\thechapter.}{1ex}{\huge\filright #1}
+\titleformat{\chapter}[block]{\bfseries\huge\centering}{\thechapter.}{1ex}{#1}
 
 % Fancy Header/Footer Styling
 \fancyhf{}
@@ -32,11 +36,11 @@
 \pagestyle{fancy}
 
 % Background
-\AddToHook{shipout/background} {
+\AddToHook{shipout/background}
+{
   \put(0cm, -3cm){\includegraphics[width=\paperwidth]{header.png}}
   \put(0cm, -\paperheight){\includegraphics[width=\paperwidth]{footer.png}}
 }
-
 
 %%%%%%%%%%%%%% Shortcuts %%%%%%%%%%%%%
 \newcommand{\scemaj}{É}
@@ -53,9 +57,10 @@
 %%%%%%%%%%%%%% Document %%%%%%%%%%%%%%
 \begin{document}
 
-\include{src/cover_page}
+\include{src/cover_pages/report_cover}
 \include{src/foreword}
 \include{src/table_of_contents}
+\include{src/cover_pages/context_cover}
 \include{src/context}
 
 \end{document}
