@@ -9,11 +9,13 @@ NAME = internship_report.pdf
 
 ENTRY = src/$(NAME:.pdf=.tex)
 
-SRC_FILES = $(ENTRY)							\
-			src/cover_page.tex					\
-			src/foreword.tex					\
-			src/table_of_contents.tex			\
-			src/context.tex						\
+SRC_FILES = $(ENTRY)									\
+			src/cover_pages/context_cover.tex			\
+			src/cover_pages/report_cover.tex			\
+			src/utils/cover_page_env.tex				\
+			src/context.tex								\
+			src/foreword.tex							\
+			src/table_of_contents.tex					\
 
 
 .PHONY: all clean fclean re

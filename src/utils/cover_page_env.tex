@@ -1,0 +1,40 @@
+%%
+%% EPITECH PROJECT, 2025
+%% Tek2 Internship Report
+%% File description:
+%% Cover Page Environment Util
+%%
+
+% Config
+\newcommand{\coverpagepart}{Partie}
+
+% Setup
+\newcounter{coverpagepart}
+
+% Env
+\newenvironment{coverpage}[1][]
+{
+  \stepcounter{coverpagepart}
+
+  \begingroup
+  \let\clearpage\par  % \chapter uses \clearpage; replace with lf
+
+  \begin{center}
+
+    \vspace*{2cm}
+
+    % Render optional image
+    \ifthenelse{\isempty{#1}}{}{\includegraphics[height=3cm]{#1}}
+
+    \vspace*{3cm}
+
+    % Part header (ex: Part I)
+    \fontsize{40}{50}\textbf{\coverpagepart~\Roman{coverpagepart}}
+    \vspace{1em}
+}
+{
+  \end{center}
+  \endgroup
+
+  \thispagestyle{fancy}
+}
