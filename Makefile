@@ -11,10 +11,12 @@ ENTRY = src/$(NAME:.pdf=.tex)
 
 SRC_FILES = $(ENTRY)									\
 			src/cover_pages/context_cover.tex			\
+			src/cover_pages/mission_cover.tex			\
 			src/cover_pages/report_cover.tex			\
 			src/utils/cover_page_env.tex				\
 			src/context.tex								\
 			src/foreword.tex							\
+			src/mission.tex								\
 			src/table_of_contents.tex					\
 
 
