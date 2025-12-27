@@ -10,11 +10,13 @@ NAME = internship_report.pdf
 ENTRY = src/$(NAME:.pdf=.tex)
 
 SRC_FILES = $(ENTRY)									\
+			src/cover_pages/conclusion_cover.tex		\
 			src/cover_pages/context_cover.tex			\
 			src/cover_pages/mission_cover.tex			\
 			src/cover_pages/outcome_cover.tex			\
 			src/cover_pages/report_cover.tex			\
 			src/utils/cover_page_env.tex				\
+			src/conclusion.tex							\
 			src/context.tex								\
 			src/foreword.tex							\
 			src/mission.tex								\
