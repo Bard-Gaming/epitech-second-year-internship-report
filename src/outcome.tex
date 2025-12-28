@@ -6,9 +6,6 @@
 %% of the report
 %%
 
-\section{Mission Générale}
-\subsection*{Réception}
-
 \section{Venues Workflow}
 
 \begin{flushleft}
@@ -60,6 +57,7 @@
   les fichiers soi-même.
 \end{flushleft}
 
+\newpage
 
 \section{MAM Shortcuts Extension}
 
@@ -125,13 +123,124 @@
 
 \section{MAM SDK}
 
+\begin{flushleft}
+  Le kit de développement de logiciel pour le MAM a été réalisé en Python,
+  afin de pouvoir être utilisé dans d'autres projets qui sont crée dans le
+  même langage. Le projet était en développement en même temps que le serveur
+  MCP, car les outils du serveur MCP sont crée à partir de l'SDK, ce qui veut
+  dire qu'on pouvait tout de suite le mettre en pratique et vérifier que tout
+  marche comme attendu dans un cadre pratique.
+\end{flushleft}
+
 \subsection*{Facilités}
+
+\begin{flushleft}
+  Le développement d'outils pour d'autres développeurs est mon domaine
+  préféré, donc j'ai eu beaucoup de facilités lors de ce projet.
+  De plus, j'ai bien apprécié de lire la spécification et d'en créer
+  un outil qui peut être réutilisé dans d'autres projets.
+\end{flushleft}
 
 \subsection*{Difficultés}
 
+\begin{flushleft}
+  La difficulté principale du projet était de bien nommer les opérations.
+  Typiquement, les services numériques disposant d'un API peuvent documenter
+  les noms de leurs opérations avec la spécification OpenAPI.\@ Or, le MAM
+  du client n'a pas correctement documenté de noms, ce qui faisait que je devais
+  générer des noms d'opérations avec les informations que j'avais.
+\end{flushleft}
+
+\begin{flushleft}
+  Au final, cette solution a bien marchée, et avec un peu d'ajustements via
+  un fichier de configuration que j'ai crée, le produit final marche sans
+  problèmes.
+\end{flushleft}
+
 \subsection*{Réception}
+
+\begin{flushleft}
+  Comme il s'agit d'un projet / outil interne aux développeurs, il n'y
+  a pas eu d' ``utilisteurs'' du produit à proprement dire, et donc il
+  n'y avait pas de vraie ``récéption'' non plus.
+  Cependant, comme dit auparavant, on a pu utiliser le projet lors du
+  développement du serveur MCP, et tout a fonctionné comme prévu.
+\end{flushleft}
+
+\newpage
 
 \section{MAM MCP Server}
+
+\begin{flushleft}
+  Le serveur MCP pour interagir avec la plateforme MAM
+  était le dernier projet sur lequel nous avions travaillé.
+  On a implémenté le projet en Python en utilisant la libraire
+  \textit{FastMCP}, qui fait automatiquement toute la partie
+  de gestion d'entrée qui est répétitive à implémenter.
+  Comme tout ce qui est en rapport avec l'intelligence artificielle
+  est assez nouveau, le projet à dû passer par plusieurs itérations
+  avant d'avoir un produit final. Ainsi, on devait complètement
+  retravailler l'architecture du projet deux reprises, ce qui nous
+  a prit du temps.
+\end{flushleft}
+
+\begin{flushleft}
+  Le projet du serveur MCP est abouti pour l'instant, mais va
+  être reprit par les ingénieurs de TrackIt, donc Mathieu BRUJAN
+  et Timothé CONIEL, dès l'année 2026.
+\end{flushleft}
+
 \subsection*{Facilités}
+
+\begin{flushleft}
+  Le début du projet était très rapide, car il y a beaucoup d'outils
+  et de logiciels pour travailler avec des intelligences artificielles
+  en local, ce qui était idéal pour tester le serveur MCP et ses
+  capacités. De plus, quand il y avait des erreurs, c'était assez facile
+  de les repérer, car il est possible de voir exactement ce que l'IA pense,
+  et donc d'\scou{} l'erreur provient.
+\end{flushleft}
+
 \subsection*{Difficultés}
+
+\begin{flushleft}
+  \scemaj{}tant donné que le projet utilise de l'intelligence
+  artificielle, et que la nature de tout ce qui sort de cette
+  IA est assez volatile, j'ai rencontré un grand nombre de messages
+  d'erreur sur ce projet. Le problème vient du fait que l'IA peut
+  se tromper, et donc provoquer des erreurs, mais contrairement à
+  du code traditionnel, on ne peut pas simplement débugger une IA.\@
+  Finalement, j'ai apprit avec mes collègues que les erreurs provenaient
+  d'un modèle d'intelligence artificelle qui avait été corrigé, mais
+  qui n'avait pas été mis\textendash{}à\textendash{}jour par AWS.\@
+\end{flushleft}
+
+\begin{flushleft}
+  Une autre difficulté était qu'on ne pouvait pas changer de modèle
+  d'intelligence artificielle, car le seule meilleure modèle sur la
+  plateforme est un modèle Claude, et qu'Anthropic (l'entreprise
+  américaine qui a crée Claude) a changé ses conditions d'utilisation
+  pour interdire n'importe quelle entreprise étant lié à la Chine d'une
+  manière ou d'une autre d'utiliser leurs produits, ce qui nous
+  interdissait effectivement de corriger la source d'erreur.
+\end{flushleft}
+
+\newpage
+
 \subsection*{Réception}
+
+\begin{flushleft}
+  Comme avec l'extension de navigateur, j'ai à nouveau été
+  invité à présenter le projet devant toute l'équipe du client
+  pour leur dernière réunion trimestrielle de l'année.
+\end{flushleft}
+
+\begin{flushleft}
+  Malheureusement, dû à la nature volatile du projet, j'ai
+  rencontré deux erreurs pendant la démonstration du projet,
+  mais ça n'a pas empêché les membres de l'équipe du client
+  de voir le potentiel dans le projet, ainsi que de se poser
+  des questions sur d'autres cas d'utilisations pour le projet
+  (ce qui était le but de JS), donc les problèmes n'ont
+  finalement pas trop empiété au succès du serveur MCP.\@
+\end{flushleft}
