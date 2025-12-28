@@ -80,20 +80,30 @@
   Ainsi, le client nous demandait de créer un \textit{workflow}
   (\sccad{} une suite de tâches qui se lancent automatiquement
   lorsqu'une action spécifique est faite), qui faisait les tâches
-  automatiquement et à sa place lorsque un membre de l'équipe des
+  à sa place (automatiquement) lorsque un membre de l'équipe des
   photographes télécharge sa collection de photographies dans un
-  dossier spécifique. Le déroulement du projet que nous avions
-  crée est ainsi:
+  dossier spécifique.
 \end{flushleft}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=12cm]{venues_workflow}
-  \caption{Déroulement du projet}
+  \caption{Déroulement du Workflow}
 \end{figure}
 
 \begin{flushleft}
-
+  Comme le montre le diagramme ci-dessus, le workflow débute
+  quand un membre de l'équipe de photographie télécharge une
+  fichier zip dans un dossier dédiée aux sites d'évènements.
+  Une fois téléchargé, une fonction hébergée sur AWS est lancée,
+  qui est responsable d'extraire le fichier zip et d'afficher
+  le progrès du traitement en parallèle, afin que l'utilisateur
+  sache que le traitement est en cours. Une fois terminé,
+  une nouvelle ressource liée aux données extraites est crée dans
+  la plateforme MAM, contenant des métadonnées automatiquement
+  assignées (comme le nom du lieu, la date, le pays, \scetc).
+  Finalement, une image vignette est automatiquement rajoutée à
+  la ressource, et le workflow est terminé.
 \end{flushleft}
 
 \section{Private PIP}
