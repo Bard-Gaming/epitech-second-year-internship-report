@@ -27,7 +27,7 @@ to do is run ~make~:
 make
 #+end_src
 
-You can then (optionnally) run:
+You can then (optionally) run:
 
 #+begin_src shell
 make clean
