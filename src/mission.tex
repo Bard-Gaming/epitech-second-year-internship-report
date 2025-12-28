@@ -127,10 +127,9 @@
 \end{flushleft}
 
 \begin{flushleft}
-  Ainsi, j'ai été chargé de réaliser cette extension de navigateur
-  (spécifique aux navigateurs Chromium, comme Google Chrome et Bing,
-  entre autre).
-
+  Ainsi, on m'a confié le projet de réaliser cette extension
+  de navigateur (spécifique aux navigateurs Chromium,
+  comme Google Chrome et Bing, entre autre).
 \end{flushleft}
 
 \begin{figure}[h]
@@ -147,15 +146,50 @@
 \begin{flushleft}
   L'image ci-dessus montre les quatre pages de l'extension: la
   page \textit{raccourcis}, contenant les raccourcis clavier;
-  la partie
+  la page \textit{actions}, \scou{} les actions qui s'activent
+  lorsqu'un raccourci clavier est actionné sont définies; la
+  page \textit{paramètres}, sur laquelle on peut configurer
+  l'extension; et finalement la page \textit{aide} qui explique
+  comment on peut utiliser l'extension, ainsi que ce qu'elle
+  permet de faire.
+\end{flushleft}
+
+\begin{flushleft}
+  En considérant que les utilisateurs qui naviguent la plateforme
+  pourraient vouloir des raccourcis pour des actions auxquelles
+  nous n'avions pas encore pensés, j'ai choisi d'implémenter un
+  système de création d'action qui permet aux utilisateurs
+  de définir leurs propres actions, voire de personnaliser
+  les actions qui existent déjà, à leur propre guise.
 \end{flushleft}
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=6cm]{extension_create_action}
-  \caption{Page de création d'action de l'extension}
+  \includegraphics[width=5cm]{extension_create_action}
+  \caption{Menu de création d'action de l'extension}
 \end{figure}
 
+\begin{flushleft}
+  Comme le montre l'image ci-dessus, le créateur d'actions permet
+  de définir ses propres actions en définissant le type d'action,
+  les paramètres de l'action, et en configurant d'autres options.
+\end{flushleft}
+
+\begin{flushleft}
+  Une fois qu'une action est crée, elle peut être exportée sous
+  forme d'un fichier (comme le montre l'image ci-dessous), ce qui
+  permet aux utilisateurs de se partager des actions
+  entre\textendash{}eux, ce qui est pratique pour ceux qui ne
+  souhaitent pas prendre le temps d'en créer.
+\end{flushleft}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=5cm]{extension_action_menu}
+  \caption{Page d'actions de l'extension}
+\end{figure}
+
+\newpage
 
 \section{MAM SDK}
 
