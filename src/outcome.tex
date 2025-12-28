@@ -10,26 +10,128 @@
 \subsection*{Réception}
 
 \section{Venues Workflow}
-\subsection*{Réception}
+
+\begin{flushleft}
+  Le workflow des sites d'évènements a été implémenté en
+  (environ) trois semaines, puis a été déployé et utilisé
+  en production chez le client.
+\end{flushleft}
+
 \subsection*{Facilités}
+
+\begin{flushleft}
+  Le projet était délibérément simple dans son architecture,
+  étant donné qu'il s'agissait du premier projet qui avait
+  été attribué aux stagiaires. De plus, le projet été à
+  réaliser en Python, qui est un langage de programmation
+  que je maîtrise déjà assez pour pouvoir écrire du code
+  sans devoir réfléchir à ce que je fais.
+\end{flushleft}
+
 \subsection*{Difficultés}
+
+\begin{flushleft}
+  Malgré les facilités du projet, il y avait évidemment
+  aussi des difficultés. La difficulté primaire du projet
+  était de pouvoir gérer des grandes tailles de fichiers
+  venant de l'utilisateur, car le besoin de mémoire vive,
+  ainsi que le temps nécessaire pour faire tout le traitement
+  qui vient avec, dépend en grande partie de la taille du fichier.
+  Le temps était un grand problème, car il y a une limite dure de
+  15 minutes sur les fonctions (il s'agit d'une limitation dans AWS),
+  ce qui faisait qu'un traitement excédant cette durée était
+  automatiquement annulé.
+\end{flushleft}
+
+\begin{flushleft}
+  Pour régler ce problème, il fallait diviser le fichier prit en
+  entrée en plusieurs petits morceaux (qui eux sont facile à traiter),
+  puis de faire le traitement de morceaux en parallèle. Cette approche
+  avait nettement réduit la durée du traitement (de \~14 minutes avant
+  l'amélioration à \~2 minutes après l'amélioration).
+\end{flushleft}
+
+\subsection*{Réception}
+
+\begin{flushleft}
+  Peu après le déploiement, JS (le représentant du client) nous a
+  confirmé que l'équipe des photographes avait pu utiliser le workflow
+  avec succès, et qu'il était bien content de ne plus devoir manipuler
+  les fichiers soi-même.
+\end{flushleft}
+
 
 \section{MAM Shortcuts Extension}
-\subsection*{Réception}
+
+\begin{flushleft}
+  L'extension de navigateur pour les raccourcis de
+  clavier a abouti après environ 11 semaines.
+  Comme il s'agit le développement lié à un navigateurs,
+  j'ai dû réaliser le projet dans le langage de programmation
+  JavaScript. Cependant, comme c'est le cas dans l'industrie,
+  j'ai utilisé une extension de ce langage nommé \textit{TypeScript},
+  qui permet de mieux organiser son code, ainsi que d'éviter des
+  fautes de typage. De plus, comme je souhaitais faire une belle interface
+  graphique pour les utilisateurs, j'ai choisi de faire du \textit{React},
+  qui est aussi une technologie typiquement utilisée dans l'industrie.
+\end{flushleft}
+
+\begin{flushleft}
+  Quant au status, le projet est terminé, mais il reste améliorable
+  avec des nouvelles fonctionnalités, vu qu'il s'agit d'un projet
+  ouvert. Lors de ma réalisation, j'ai tâché de ne pas inclure
+  d'informations sur le client dans le code, ce qui veut dire qu'il
+  serait possible que le client ouvre projet au public un jour ou
+  un autre, en fonction de leur politique de confidentialité.
+\end{flushleft}
+
 \subsection*{Facilités}
+
+\begin{flushleft}
+  Ce qui m'a aidé le plus lors de la réalisation du projet, était
+  que pour l'extension de navigateur, j'avais une grande vague de
+  motivation et beaucoup d'idées. Comme il s'agissait d'un projet
+  relativement ouvert, JS était d'accord avec les idées que j'avais
+  quand je les ai présenté lors des réunions hebdomadaires, ce qui
+  me motivait d'avantage de travailler sur le projet.
+\end{flushleft}
+
 \subsection*{Difficultés}
 
-% \section{Private PIP}
-% \subsection*{Réception}
-% \subsection*{Facilités}
-% \subsection*{Difficultés}
+\begin{flushleft}
+  Contrairement au premier projet, je n'avais pas autant d'expérience
+  avec le React voire le TypeScript qu'avec le Python, ce qui a ralenti
+  le début du projet. De plus, j'ai dû changer du code que j'avais déjà
+  écrit, comme c'était un projet relativement ouvert, et que des nouvelles
+  idées nécessitant de changer le code étaient assez typique.
+  Une autre difficulté était de se limiter à un minimum strict de dépendences
+  externes, \sccad{} de code que d'autres développeurs partagent. La raison
+  que je me limitait à un minimum sur les dépendences étant d'un côté le
+  côté éducatif (il s'agit d'un stage, après tout), mais surtout qu'il y a
+  souvent des failles de sécurité venant de dépendances externes, et que je
+  voulais éviter cela, connaissant la politique de confidentialité du client.
+\end{flushleft}
+
+\subsection*{Réception}
+
+\begin{flushleft}
+  Vers la fin du développement du projet, j'avais la chance de pouvoir
+  démontrer l'extension de navigateur à toute l'équipe du client lors
+  de leur réunion trimestrielle, après avoir été invité par JS.\@
+  L'équipe était contente et un peu surprise, car le projet était présenté
+  comme bonus à la fin de la partie de développement de la réunion, et que
+  qu'ils ne savait pas à quoi s'attendre.
+\end{flushleft}
 
 \section{MAM SDK}
-\subsection*{Réception}
+
 \subsection*{Facilités}
+
 \subsection*{Difficultés}
 
-\section{MAM MCP Server}
 \subsection*{Réception}
+
+\section{MAM MCP Server}
 \subsection*{Facilités}
 \subsection*{Difficultés}
+\subsection*{Réception}
