@@ -193,4 +193,89 @@
 
 \section{MAM SDK}
 
+\begin{flushleft}
+  Le prochain projet de mon stage, intitulé \textit{MAM SDK},
+  est un \textit{Software Development Kit} (anglais: kit de
+  développement logiciel), \sccad{} un ``outil'' permettant
+  d'interagir avec la plateforme MAM plus simplement et de
+  manière plus organisée.
+\end{flushleft}
+
+\begin{flushleft}
+  Pour permettre les développeurs d'interagir avec la plateforme,
+  le MAM choisit par le client met à disposition un \textit{API}
+  (Application Programming Interface \textemdash{} anglais: interface
+  de programmation d'application). Ainsi, le développeur peut envoyer
+  des requêtes internet au MAM pour interagir avec la plateforme sans
+  devoir accèder au site web (ce qui serait fastidieux pour un
+  développeur). Or, utiliser des requêtes internet tel qu'ils sont
+  mène rapidement à des erreurs: le développeur ne voit pas le format
+  attendu pour sa requête, ni les paramètres qu'il doit fournir. De plus,
+  s'il y a un problème au niveau de la plateforme, le développeur doit
+  gérer le problème sans que son application en soit trop affecté.
+\end{flushleft}
+
+\begin{flushleft}
+  Ainsi, si le développeur a accès à un SDK qui gère le formattage, les
+  paramètres, ainsi que les problèmes venant de la plateforme, il est
+  possible pour un développeur de faire ses applications de manière plus
+  rapide et plus maintenable.
+\end{flushleft}
+
+\begin{flushleft}
+  Or, afin de garantir que le projet fonctionne avec les futur versions
+  du MAM, on a prit le choix de générer le code du SDK en utilisant
+  la spécification OpenAPI que le MAM définit.
+\end{flushleft}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=12cm]{openapi_spec}
+  \caption{Site de la spécification OpenAPI}
+\end{figure}
+
+\begin{flushleft}
+  L'image ci-dessus montre le site de OpenAPI, qui est une
+  spécification permettant de définir ce que les développeurs
+  peuvent faire avec un API, ainsi que le format attendu des
+  requêtes internet.
+\end{flushleft}
+
+\newpage
+
 \section{MAM MCP Server}
+
+\begin{flushleft}
+  Pour le dernier projet du stage, nous (\sccad{} Omar AHMED et moi)
+  avions été chargé de réaliser un serveur suivant le protocole de
+  contexte de modèle (MCP \textemdash{} venant de l'anglais: Model
+  Context Protocol), définit par Anthropic.
+  Ce protocole permet aux intelligences artificielles d'utiliser des
+  outils développés par des ingénieurs lorsqu'ils traitent une demande.
+\end{flushleft}
+
+\begin{flushleft}
+  Par exemple, on pourrait définir un outil qui ouvre la porte de sa
+  garage. Ensuite, suite à la demande d'ouvrir la porte de garage,
+  l'intelligence artificielle (ci-après \textit{IA}) pourrait l'ouvrir
+  de son propre gré, comme le montre le diagramme ci-dessous:
+\end{flushleft}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=8cm]{mcp_server}
+  \caption{Exemple de serveur MCP}
+\end{figure}
+
+\begin{flushleft}
+  L'intérêt du serveur MCP était de pouvoir interagir avec le MAM
+  via une IA, permettant aux utilisateurs d'avoir une interface
+  simplifiée pouvant faire des tâches complexes. Dans ce cas,
+  l'avantage d'une IA est qu'elle peut réaliser une suite d'étapes
+  qu'on ne pourrait autrement pas faire avec un bouton sur un site.
+  Par exemple, en définissant seulement un outil pour rechercher
+  des ressources, ainsi qu'un outil pour rajouter des métadonnées, on
+  peut demander à l'IA de trouver des ressources en manque de
+  métadonnées, et de leur attribuer ces données avec le contexte
+  qu'elle a, facilitant le traitement de données qui suit.
+\end{flushleft}
